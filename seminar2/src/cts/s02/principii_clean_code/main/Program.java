@@ -1,23 +1,21 @@
 package cts.s02.principii_clean_code.main;
 
+import cts.s02.principii_clean_code.clase.Angajat;
+import cts.s02.principii_clean_code.clase.Aplicant;
+import cts.s02.principii_clean_code.clase.readers.AngajatReader;
+import cts.s02.principii_clean_code.clase.readers.AplicantReader;
+
 import java.io.FileNotFoundException;
 import java.util.List;
 
-import cts.s02.principii_clean_code.clase.Angajat;
-import cts.s02.principii_clean_code.clase.Utils;
-
 public class Program {
 
-	public static void main(String[] args) {
-		List<Angajat> listaAngajati;
-		try {
-			listaAngajati = Utils.readAngajati("angajati.txt");
-			for(Angajat angajat:listaAngajati)
-				System.out.println(angajat.toString());
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
+    public static void main(String[] args) {
+        List<Aplicant> listaAplicanti;
+        AplicantReader aplicantReader = new AngajatReader();
+        listaAplicanti = aplicantReader.readAplicant("angajati.txt"); //TODO nume fisier in constructor APlicantReader (o facem cls abstracta)
+        for (Aplicant angajat : listaAplicanti)
+            System.out.println(angajat.toString());
+    }
 
 }
