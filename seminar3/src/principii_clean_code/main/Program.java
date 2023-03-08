@@ -1,6 +1,7 @@
 package principii_clean_code.main;
 
 
+import principii_clean_code.clase.Angajat;
 import principii_clean_code.clase.Aplicant;
 import principii_clean_code.clase.readers.AngajatReader;
 import principii_clean_code.clase.readers.AplicantReader;
@@ -13,8 +14,10 @@ public class Program {
         List<Aplicant> listaAplicanti;
         AplicantReader aplicantReader = new AngajatReader();
         listaAplicanti = aplicantReader.readAplicants("angajati.txt"); //TODO nume fisier in constructor APlicantReader (o facem cls abstracta)
-        for (Aplicant angajat : listaAplicanti)
-            System.out.println(angajat.toString());
+        for (Aplicant aplicant : listaAplicanti) {
+            System.out.println(aplicant.toString());
+            aplicant.afisareSumaFinantare();
+        }
     }
 
 }

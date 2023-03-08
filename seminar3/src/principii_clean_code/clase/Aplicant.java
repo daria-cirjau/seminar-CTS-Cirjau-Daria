@@ -71,7 +71,7 @@ public abstract class Aplicant {
     public void setProiecte(int nrProiecte, String[] denumiriProiecte) {
         this.nrProiecte = nrProiecte;
         this.denumireProiect = new String[nrProiecte];
-        for(int i = 0; i < nrProiecte; i++){
+        for (int i = 0; i < nrProiecte; i++) {
             this.denumireProiect[i] = denumiriProiecte[i];
         }
     }
@@ -86,5 +86,11 @@ public abstract class Aplicant {
         sb.append(", nrProiecte=").append(nrProiecte);
         sb.append(", denumireProiect=").append(denumireProiect == null ? "null" : Arrays.asList(denumireProiect).toString());
         return sb.toString();
+    }
+
+    public abstract void afisareSumaFinantare();
+
+    protected void afisareSumaFinantare(String tipAplicant, int sumaFinantare) {
+        System.out.println(tipAplicant +" "+ nume + " " + prenume + " primeste " + sumaFinantare + " Euro/zi in proiect.");
     }
 }

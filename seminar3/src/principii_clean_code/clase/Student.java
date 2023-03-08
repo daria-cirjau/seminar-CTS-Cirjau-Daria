@@ -3,6 +3,7 @@ package principii_clean_code.clase;
 public class Student extends Aplicant {
     protected String facultate;
     protected int anStudii;
+    private static int sumaFinantare = 30;
 
 
     public String getFacultate() {
@@ -42,10 +43,8 @@ public class Student extends Aplicant {
         return stringBuffer.toString();
     }
 
-    public int finantare() {
-        int s = 20;
-        System.out.println("Studentul " + getNume() + " " + getPrenume() + " primeste" + s + " Euro/zi in proiect.");
-        return s;
+    public void afisareSumaFinantare() {
+        super.afisareSumaFinantare("Student", Student.sumaFinantare);
     }
 
 }

@@ -7,7 +7,8 @@ import java.util.Scanner;
 
 public abstract class AplicantReader {
     public abstract List<Aplicant> readAplicants(String fileName);
-    public void readAplicant(Scanner scanner, Aplicant aplicant){
+
+    public void readAplicant(Scanner scanner, Aplicant aplicant) {
         String nume = scanner.next();
         String prenume = scanner.next();
         int varsta = scanner.nextInt();

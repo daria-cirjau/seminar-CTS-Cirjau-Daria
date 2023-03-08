@@ -3,6 +3,7 @@ package principii_clean_code.clase;
 public class Angajat extends Aplicant {
     private String ocupatie;
     private int salariu;
+    private static int sumaFinantare = 100;
 
     public String getOcupatie() {
         return ocupatie;
@@ -42,10 +43,8 @@ public class Angajat extends Aplicant {
     }
 
 
-    public int finantare() {
-        int s = 10;
-        System.out.println("Angajatul " + getNume() + " " + getPrenume() + " primeste" + s + " Euro/zi in proiect.");
-        return s;
+    public void afisareSumaFinantare() {
+        super.afisareSumaFinantare("Angajat", Angajat.sumaFinantare);
     }
 
 }
