@@ -1,11 +1,9 @@
 package cts.s02.principii_clean_code.main;
 
-import cts.s02.principii_clean_code.clase.Angajat;
 import cts.s02.principii_clean_code.clase.Aplicant;
 import cts.s02.principii_clean_code.clase.readers.AngajatReader;
 import cts.s02.principii_clean_code.clase.readers.AplicantReader;
 
-import java.io.FileNotFoundException;
 import java.util.List;
 
 public class Program {
